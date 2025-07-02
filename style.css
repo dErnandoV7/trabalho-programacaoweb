@@ -1,0 +1,85 @@
+.categorias-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 30px;
+    gap: 14px;
+    margin-bottom: 100px;
+}
+
+.card-categoria {
+    width: 40%;
+    max-width: 280px;
+    background: #fff;
+    box-shadow: 0px -2px 12px 1px #20202015;
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-categoria img {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.card-categoria .botao-ver-produtos {
+    background: #007bff;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    margin-top: 4px;
+    border-radius: 4px;
+    transition: .3s;
+}
+
+.card-categoria .botao-ver-produtos:hover {
+    background-color: #1e40af;
+}
+
+.maiscomprados-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 30px;
+    gap: 14px;
+    margin-bottom: 60px;
+}
+
+.card-produto {
+    width: 40%;
+    max-width: 240px;
+    background: #fff;
+    box-shadow: 0px -2px 12px 1px #20202015;
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-produto img {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.descricao-produto {
+    font-size: 12px;
+    line-height: 16px;
+    height: 40px;
+    overflow: scroll;
+}
+
+.add-carrinho {
+    background: #16a34a;
+    color: #fff;
+    text-align: center;
+    padding: 4px;
+    margin-top: 4px;
+    border-radius: 4px;
+    transition: .3s;
+}
+
+.add-carrinho:hover {
+    background-color: #059669;
+}
