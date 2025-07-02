@@ -11,6 +11,7 @@
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1;
 }
 
 .header h2 {
@@ -31,8 +32,9 @@
 }
 
 .botao-cadastrar-usuario,
-.botao-ver-carrinho {
-    background-color: #2563eb;
+.botao-ver-carrinho,
+.botao-ir-telainicial {
+    background: #1c2844;
     color: white;
     border: none;
     font-size: 14px;
@@ -45,6 +47,7 @@
 }
 
 .botao-cadastrar-usuario:hover,
-.botao-ver-carrinho:hover {
+.botao-ver-carrinho:hover,
+.botao-ir-telainicial:hover {
     background-color: #1e40af;
 }
