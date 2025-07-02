@@ -107,3 +107,27 @@
     border-radius: 4px;
     transition: .3s;
 }
+
+
+
+@media (max-width: 970px) {
+    .categoria-txt {
+        text-align: center;
+    }
+
+    .categorias-container {
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 850px) {
+    .title-section {
+        text-align: center;
+    }
+
+    .maiscomprados-container {
+        justify-content: center;
+    }
+
+}

@@ -51,3 +51,35 @@
 .botao-ir-telainicial:hover {
     background-color: #1e40af;
 }
+
+@media (max-width: 600px) {
+    .header h2 {
+        font-size: 14px;
+    }
+
+    .header a {
+        color: #fff;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    .botao-cadastrar-usuario,
+    .botao-ver-carrinho,
+    .botao-ir-telainicial {
+        padding: 4px 8px;
+    }
+}
+
+@media (max-width: 400px) {
+    .header a {
+        color: #fff;
+        font-size: 12px;
+        text-decoration: none;
+    }
+
+    .botao-cadastrar-usuario,
+    .botao-ver-carrinho,
+    .botao-ir-telainicial {
+        padding: 4px 8px;
+    }
+}

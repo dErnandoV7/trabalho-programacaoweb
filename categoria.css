@@ -46,3 +46,10 @@
 .card .images-produto a {
     width: 33%;
 }
+
+
+@media (max-width: 500px) {
+    .card .nome-produto {
+        font-size: 16px;
+    }
+}
