@@ -171,19 +171,29 @@ const enderecoObj = new inputFormulario(inputEndereco, "endereco", erroMsgEndere
 
 const inputsObj = [nomeObj, emailObj, senhaObj, cpfObj, cidadeObj, enderecoObj]
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault()
+const validarCampo = (input) => {
+    const valido = input.validar()
+    if (valido) input.elementError.classList.add("erro-hidden")
+    else {
+        input.elementError.classList.remove("erro-hidden")
+    }
+    return valido
+}
 
-    let formularioValido = true
+inputsObj.forEach((input) => {
+    input.element.addEventListener("keyup", () => validarCampo(input))
+})
+
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    let formularioValido = true;
 
     inputsObj.forEach((input) => {
-        const valido = input.validar()
-        if (valido) input.elementError.classList.add("erro-hidden")
-        else {
-            input.elementError.classList.remove("erro-hidden")
-            formularioValido = false
-        }
-    })
+        const valido = validarCampo(input);
+        if (!valido) formularioValido = false;
+    });
 
-    if (formularioValido) form.submit()
-})
+    if (formularioValido) form.submit();
+});
