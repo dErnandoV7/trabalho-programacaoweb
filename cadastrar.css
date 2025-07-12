@@ -68,6 +68,19 @@ input {
     cursor: pointer;
 }
 
+.erro {
+    background: #ff7b7b3d;
+    padding: 4px;
+    font-size: 12px;
+    color: #f73e3e;
+    border-radius: 4px;
+    user-select: none;
+}
+
+.erro-hidden {
+    visibility: hidden;
+}
+
 @media (max-width: 600px) {
     body {
         background: none;
