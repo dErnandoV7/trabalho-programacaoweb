@@ -1,141 +1,146 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-        <link rel="stylesheet" href="index.css">
-        <link rel="stylesheet" href="header.css">
-        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="style.css">
 
-        <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-            rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-    </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <body>
-        <div class="container">
-            <div class="header">
-                <h2>
-                    <a href="/">Programação Web - Trabalho</a>
-                </h2>
-                <div>
-                    <a href="cadastrar.html" class="botao-cadastrar-usuario">Cadastrar Usuário</a>
-                    <a href="carrinho.html" class="botao-ver-carrinho">
-                        Carrinho
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>
+                <a href="/">Programação Web - Trabalho</a>
+            </h2>
+            <div>
+                <a href="cadastrar.html" class="botao-cadastrar-usuario">Cadastrar Usuário</a>
+                <a href="cadastrar.html" class="botao-cadastrar-usuario">Entrar</a>
+                <a href="carrinho.html" class="botao-ver-carrinho">
+                    Carrinho
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </div>
+        </div>
+        <div class="main-container">
+            <h2 class="title-section categoria-txt">Todas as categorias</h2>
+            <div class="categorias-container">
+                <div class="card-categoria">
+                    <img src="images/categorias/camisa-polo.png" alt="Camisa" class="img-card-categoria">
+                    <p>Camisas</p>
+                    <a href="categorias/camisas/index.html" class="botao-ver-produtos">Ver produtos</a>
+                </div>
+
+                <div class="card-categoria">
+                    <img src="images/categorias/calcas.png" alt="Calça" class="img-card-categoria">
+                    <p>Calças</p>
+                    <a href="categorias/calcas/index.html" class="botao-ver-produtos">Ver produtos</a>
+                </div>
+
+                <div class="card-categoria">
+                    <img src="images/categorias/sapato.png" alt="Sapato" class="img-card-categoria">
+                    <p>Sapatos</p>
+                    <a href="categorias/sapatos/index.html" class="botao-ver-produtos">Ver produtos</a>
+                </div>
+
+                <div class="card-categoria">
+                    <img src="images/categorias/relogio-de-pulso.png" alt="Relogio" class="img-card-categoria">
+                    <p>Relógios</p>
+                    <a href="categorias/relogios/index.html" class="botao-ver-produtos">Ver produtos</a>
+                </div>
+
+                <div class="card-categoria">
+                    <img src="images/categorias/iphone.png" alt="Celular" class="img-card-categoria">
+                    <p>Smartphones</p>
+                    <a href="categorias/smartphones/index.html" class="botao-ver-produtos">Ver
+                        produtos</a>
+                </div>
+            </div>
+            <h2 class="title-section">Produtos mais comprados</h2>
+            <div class="maiscomprados-container">
+                <div class="card-produto">
+                    <img src="images/camisas/camisa_1_1.png" alt="Camisa">
+                    <p class="descricao-produto">
+                        Kit 3 camisetas Masculina
+                    </p>
+                    <a href="categorias/camisas/produtos/produto1.html" class="ver-produto">
+                        Ver produto
+                    </a>
+                    <a href="#" class="add-carrinho">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+                </div>
+                <div class="card-produto">
+                    <img src="images/camisas/camisa_2_1.png" alt="Camisa">
+                    <p class="descricao-produto">
+                        Camisa Nike Park Dri-Fit Masculina
+                    </p>
+                    <a href="categorias/camisas/produtos/produto2.html" class="ver-produto">
+                        Ver produto
+                    </a>
+                    <a href="#" class="add-carrinho">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+                </div>
+                <div class="card-produto">
+                    <img src="images/relogios/relogio_1_1.png" alt="Relogio">
+                    <p class="descricao-produto">
+                        Relógio Citizen Masculino Eco-Drive
+                    </p>
+                    <a href="categorias/relogios/produtos/produto1.html" class="ver-produto">
+                        Ver produto
+                    </a>
+                    <a href="#" class="add-carrinho">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+                </div>
+                <div class="card-produto">
+                    <img src="images/calcas/calca_1_1.png" alt="Calça">
+                    <p class="descricao-produto">
+                        Calça Mizuno Básica Masculina - Preto
+                    </p>
+                    <a href="categorias/calcas/produtos/produto1.html" class="ver-produto">
+                        Ver produto
+                    </a>
+                    <a href="#" class="add-carrinho">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+                </div>
+                <div class="card-produto">
+                    <img src="images/calcas/calca_2_1.png" alt="Calça">
+                    <p class="descricao-produto">
+                        Calça jeans Masculina Skinny Délavé Street
+                    </p>
+                    <a href="categorias/calcas/produtos/produto2.html" class="ver-produto">
+                        Ver produto
+                    </a>
+                    <a href="#" class="add-carrinho">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </a>
                 </div>
             </div>
-            <div class="main-container">
-                <h2 class="title-section categoria-txt">Todas as categorias</h2>
-                <div class="categorias-container">
-                    <div class="card-categoria">
-                        <img src="images/categorias/camisa-polo.png" alt="Camisa" class="img-card-categoria">
-                        <p>Camisas</p>
-                        <a href="categorias/camisas/index.html" class="botao-ver-produtos">Ver produtos</a>
-                    </div>
-
-                    <div class="card-categoria">
-                        <img src="images/categorias/calcas.png" alt="Calça" class="img-card-categoria">
-                        <p>Calças</p>
-                        <a href="categorias/calcas/index.html" class="botao-ver-produtos">Ver produtos</a>
-                    </div>
-
-                    <div class="card-categoria">
-                        <img src="images/categorias/sapato.png" alt="Sapato" class="img-card-categoria">
-                        <p>Sapatos</p>
-                        <a href="categorias/sapatos/index.html" class="botao-ver-produtos">Ver produtos</a>
-                    </div>
-
-                    <div class="card-categoria">
-                        <img src="images/categorias/relogio-de-pulso.png" alt="Relogio" class="img-card-categoria">
-                        <p>Relógios</p>
-                        <a href="categorias/relogios/index.html" class="botao-ver-produtos">Ver produtos</a>
-                    </div>
-
-                    <div class="card-categoria">
-                        <img src="images/categorias/iphone.png" alt="Celular" class="img-card-categoria">
-                        <p>Smartphones</p>
-                        <a href="categorias/smartphones/index.html" class="botao-ver-produtos">Ver
-                            produtos</a>
-                    </div>
-                </div>
-                <h2 class="title-section">Produtos mais comprados</h2>
-                <div class="maiscomprados-container">
-                    <div class="card-produto">
-                        <img src="images/camisas/camisa_1_1.png" alt="Camisa">
-                        <p class="descricao-produto">
-                            Kit 3 camisetas Masculina
-                        </p>
-                        <a href="categorias/camisas/produtos/produto1.html" class="ver-produto">
-                            Ver produto
-                        </a>
-                        <a href="#" class="add-carrinho">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </a>
-                    </div>
-                    <div class="card-produto">
-                        <img src="images/camisas/camisa_2_1.png" alt="Camisa">
-                        <p class="descricao-produto">
-                            Camisa Nike Park Dri-Fit Masculina
-                        </p>
-                        <a href="categorias/camisas/produtos/produto2.html" class="ver-produto">
-                            Ver produto
-                        </a>
-                        <a href="#" class="add-carrinho">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </a>
-                    </div>
-                    <div class="card-produto">
-                        <img src="images/relogios/relogio_1_1.png" alt="Relogio">
-                        <p class="descricao-produto">
-                            Relógio Citizen Masculino Eco-Drive
-                        </p>
-                        <a href="categorias/relogios/produtos/produto1.html" class="ver-produto">
-                            Ver produto
-                        </a>
-                        <a href="#" class="add-carrinho">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </a>
-                    </div>
-                    <div class="card-produto">
-                        <img src="images/calcas/calca_1_1.png" alt="Calça">
-                        <p class="descricao-produto">
-                            Calça Mizuno Básica Masculina - Preto
-                        </p>
-                        <a href="categorias/calcas/produtos/produto1.html" class="ver-produto">
-                            Ver produto
-                        </a>
-                        <a href="#" class="add-carrinho">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </a>
-                    </div>
-                    <div class="card-produto">
-                        <img src="images/calcas/calca_2_1.png" alt="Calça">
-                        <p class="descricao-produto">
-                            Calça jeans Masculina Skinny Délavé Street
-                        </p>
-                        <a href="categorias/calcas/produtos/produto2.html" class="ver-produto">
-                            Ver produto
-                        </a>
-                        <a href="#" class="add-carrinho">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
         </div>
-    </body>
-    
+    </div>
+</body>
+
 </html>
