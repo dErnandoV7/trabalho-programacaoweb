@@ -42,6 +42,12 @@ class inputFormulario {
             if (valido) return true
             else return false
         }
+        else if (this.tipo == "confirmar-senha") {
+            const valido = this.validarConfirmarSenha()
+            if (valido) return true
+            else return false
+        }
+
         else if (this.tipo == "cpf") {
             const valido = this.validarCPF()
             if (valido) return true
@@ -140,6 +146,16 @@ class inputFormulario {
         if (value.length >= 4) return true
         else return false
     }
+
+    validarConfirmarSenha() {
+        if (!this.validarCampoObrigatorio()) return false;
+
+        const inputSenha = document.querySelector("#senha").value
+        const value = this.element.value.trim();
+
+        if (value == inputSenha) return true
+        else return false
+    }
 }
 
 const form = document.querySelector("#form")
@@ -153,6 +169,9 @@ const erroMsgEmail = document.querySelector(".msg-erro-email")
 const inputSenha = document.querySelector("#senha")
 const erroMsgSenha = document.querySelector(".msg-erro-senha")
 
+const inputSenhaConfirm = document.querySelector("#confirmar-senha")
+const erroMsgSenhaConfirm = document.querySelector(".msg-erro-confirmar-senha")
+
 const inputCPF = document.querySelector("#cpf")
 const erroMsgCPF = document.querySelector(".msg-erro-cpf")
 
@@ -165,11 +184,12 @@ const erroMsgEndereco = document.querySelector(".msg-erro-endereco")
 const nomeObj = new inputFormulario(inputNome, "nome", erroMsgNome)
 const emailObj = new inputFormulario(inputEmail, "email", erroMsgEmail)
 const senhaObj = new inputFormulario(inputSenha, "senha", erroMsgSenha)
+const senhaConfirmObj = new inputFormulario(inputSenhaConfirm, "confirmar-senha", erroMsgSenhaConfirm)
 const cpfObj = new inputFormulario(inputCPF, "cpf", erroMsgCPF)
 const cidadeObj = new inputFormulario(inputCidade, "cidade", erroMsgCidade)
 const enderecoObj = new inputFormulario(inputEndereco, "endereco", erroMsgEndereco)
 
-const inputsObj = [nomeObj, emailObj, senhaObj, cpfObj, cidadeObj, enderecoObj]
+const inputsObj = [nomeObj, emailObj, senhaObj, senhaConfirmObj, cpfObj, cidadeObj, enderecoObj]
 
 const validarCampo = (input) => {
     const valido = input.validar()
@@ -199,7 +219,7 @@ form.addEventListener("submit", (e) => {
         const dados = {}
 
         inputsObj.forEach((input) => {
-            dados[input.tipo] = input.element.value
+            if (input.tipo != "confirmar-senha") dados[input.tipo] = input.element.value
         })
 
         fetch('http://localhost:3333/cadastra_usuario', {
@@ -207,9 +227,9 @@ form.addEventListener("submit", (e) => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(dados) 
+            body: JSON.stringify(dados)
         })
-        .then((res) => console.log(res))
-        .catch((error) => console.log(error))
+            .then((res) => console.log(res))
+            .catch((error) => console.log(error))
     }
 });
