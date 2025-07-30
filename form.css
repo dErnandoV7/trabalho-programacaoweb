@@ -4,8 +4,6 @@ body {
     align-items: center;
     height: 100vh;
     padding: 0;
-    /* background: #eeeeee; */
-    /* background: #355366; */
     background: #e9e9e9;
 }
 
@@ -79,6 +77,15 @@ input {
 
 .erro-hidden {
     visibility: hidden;
+}
+
+#login-result {
+    display: none;
+    background: #ff4141;
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    border-radius: 6px;
 }
 
 @media (max-width: 600px) {

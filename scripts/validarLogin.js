@@ -68,6 +68,7 @@ class inputFormulario {
 }
 
 const form = document.querySelector("#form")
+const msgLoginResult = document.querySelector("#login-result")
 
 const inputEmail = document.querySelector("#email")
 const erroMsgEmail = document.querySelector(".msg-erro-email")
@@ -94,7 +95,7 @@ inputsObj.forEach((input) => {
 })
 
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     let formularioValido = true;
@@ -104,5 +105,38 @@ form.addEventListener("submit", (e) => {
         if (!valido) formularioValido = false;
     });
 
-    if (formularioValido) form.submit();
+    if (formularioValido) {
+        try {
+            const dados = {}
+
+            inputsObj.forEach((input) => {
+                dados[input.tipo] = input.element.value
+            })
+
+            const res = await fetch('http://localhost:3333/autenticacaoUsuario', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(dados)
+            })
+
+            const json = await res.json()
+
+            if (res.status === 200) window.location.href = "/carrinho.html"
+            else if (res.status === 401) {
+                msgLoginResult.textContent = json
+                msgLoginResult.style.display = "flex"
+            } else {
+                msgLoginResult.textContent = "Erro inesperado"
+                msgLoginResult.style.display = "flex"
+            }
+
+        } catch (error) {
+            msgLoginResult.textContent = "Erro ao realizar login"
+            msgLoginResult.style.display = "flex"
+            console.error(error)
+        }
+    }
+
 });

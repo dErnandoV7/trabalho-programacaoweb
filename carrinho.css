@@ -85,6 +85,20 @@ td input {
     background: none;
 }
 
+.confirmar-edit {
+    background: #3434e9;
+    border: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    padding: 12px;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.confirmar-edit:hover {
+    background: blue;
+}
 @media (max-width: 750px) {
     .main-container h1 {
         font-size: 20px;

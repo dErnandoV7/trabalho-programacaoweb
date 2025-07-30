@@ -6,7 +6,7 @@ body {
     margin-top: 80px;
 }
 
-.produto {
+#produto {
     width: 90%;
     max-width: 1400px;
     margin: auto;
@@ -150,6 +150,7 @@ body {
 
 .caracteristicas strong {
     color: #222222;
+    text-transform: capitalize;
 }
 
 @media (max-width: 900px) {

@@ -195,5 +195,21 @@ form.addEventListener("submit", (e) => {
         if (!valido) formularioValido = false;
     });
 
-    if (formularioValido) form.submit();
+    if (formularioValido) {
+        const dados = {}
+
+        inputsObj.forEach((input) => {
+            dados[input.tipo] = input.element.value
+        })
+
+        fetch('http://localhost:3333/cadastra_usuario', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dados) 
+        })
+        .then((res) => console.log(res))
+        .catch((error) => console.log(error))
+    }
 });
